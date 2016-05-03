@@ -24,17 +24,12 @@
         @endif
     </div>
 </div>
-<div class="form-group {{ $errors->has('name') ? ' has-error' : '' }}">
+<div class="form-group">
     {!! Form::label('description', 'Descripcción', ['class' => 'col-sm-2 control-label']) !!}
     <div class="col-sm-10">
 
         {!! Form::textarea('description', null, ['class' => 'form-control', 'placeholder' => 'Descripcción' ]) !!}
 
-        @if ($errors->has('description'))
-            <span class="help-block">
-            <strong>{{ $errors->first('description') }}</strong>
-        </span>
-        @endif
     </div>
 </div>
 <div class="form-group">

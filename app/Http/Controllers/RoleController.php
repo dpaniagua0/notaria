@@ -19,6 +19,8 @@ class RoleController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+
+        $this->middleware('admin');
     }
 
 
@@ -76,7 +78,8 @@ class RoleController extends Controller
      */
     public function edit($id)
     {
-        //
+        $role = Role::findOrfail($id);
+        return view('roles.edit', compact('role'));
     }
 
     /**
@@ -86,9 +89,12 @@ class RoleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(RoleRequest $request, $id)
     {
-        //
+        $role = Role::findOrfail($id);
+        if($role->update($request->all())){
+            return redirect('roles');
+        }
     }
 
     /**
@@ -99,6 +105,9 @@ class RoleController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $role = Role::findOrfail($id);
+        if($role->delete()){
+            return redirect('roles');
+        }
     }
 }

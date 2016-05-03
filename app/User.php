@@ -24,11 +24,33 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+
      /**
      * The roles that belong to the user.
      */
     public function roles()
     {
-        return $this->belongsToMany('App\Role', 'role_user');
+        return $this->belongsToMany('App\Role', 'role_user', 'user_id', 'role_id');
+    }
+
+    /**
+    * Get a list of role ids
+    * @return array
+    */
+
+    public function getRolesListAttribute(){
+        return $this->roles->lists('id')->toArray();
+    }
+
+    public function hasRole($rol) {
+        foreach ($this->roles()->get() as $role)
+        {
+            if ($role->name == $rol)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 }

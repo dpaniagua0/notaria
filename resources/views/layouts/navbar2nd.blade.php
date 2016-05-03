@@ -23,6 +23,80 @@
 
         </a>
       </li> 
+
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-puzzle4 position-left"></i> Usuarios <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li>
+              <a href="{{ route('users.index') }}"><i class="icon-eye"></i> Ver usuarios</a>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <a href="{{ route('users.create') }}"><i class="icon-plus3"></i> Agregar usuario</a>
+            </li>
+        </ul>
+
+
+        </a>
+      </li> 
+
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-puzzle4 position-left"></i> Conceptos <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li>
+              <a href="{{ route('conceptos.index') }}"><i class="icon-eye"></i> Ver conceptos</a>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <a href="{{ route('conceptos.create') }}"><i class="icon-plus3"></i> Agregar concepto</a>
+            </li>
+        </ul>
+
+
+        </a>
+      </li>
+
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-puzzle4 position-left"></i> Escrituras <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li>
+              <a href="{{ route('escrituras.index') }}"><i class="icon-eye"></i> Ver escrituras</a>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <a href="{{ route('escrituras.create') }}"><i class="icon-plus3"></i> Agregar escritura</a>
+            </li>
+        </ul>
+        </a>
+      </li>  
+
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-puzzle4 position-left"></i> Servicios <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li>
+              <a href="{{ route('servicios.index') }}"><i class="icon-eye"></i> Ver servicios</a>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <a href="{{ route('servicios.create') }}"><i class="icon-plus3"></i> Agregar servicio</a>
+            </li>
+        </ul>
+        </a>
+      </li>  
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-puzzle4 position-left"></i> Documentos <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li>
+              <a href="{{ route('documentos.index') }}"><i class="icon-eye"></i> Ver documentos</a>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <a href="{{ route('documentos.create') }}"><i class="icon-plus3"></i> Agregar documentos</a>
+            </li>
+        </ul>
+        </a>
+      </li>  
+
       <li class="dropdown mega-menu mega-menu-wide">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-puzzle4 position-left"></i> Components <span class="caret"></span></a>
 
@@ -739,31 +813,7 @@
       </li>
     </ul>
 
-    <ul class="nav navbar-nav navbar-right">
-      <li>
-        <a href="changelog.html">
-          <i class="icon-history position-left"></i>
-          Changelog
-          <span class="label label-inline position-right bg-success-400">1.3</span>
-        </a>
-      </li>
-
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-          <i class="icon-cog3"></i>
-          <span class="visible-xs-inline-block position-right">Share</span>
-          <span class="caret"></span>
-        </a>
-
-        <ul class="dropdown-menu dropdown-menu-right">
-          <li><a href="#"><i class="icon-user-lock"></i> Account security</a></li>
-          <li><a href="#"><i class="icon-statistics"></i> Analytics</a></li>
-          <li><a href="#"><i class="icon-accessibility"></i> Accessibility</a></li>
-          <li class="divider"></li>
-          <li><a href="#"><i class="icon-gear"></i> All settings</a></li>
-        </ul>
-      </li>
-    </ul>
+    
   </div>
 </div>
 <!-- /second navbar -->

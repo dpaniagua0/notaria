@@ -28,4 +28,13 @@ class RoleRequest extends Request
             'display_name' => 'required|min:3'
         ];
     }
+
+    public function messages(){
+        return [
+            'name.required' => 'Este campo es requerido',
+            'name.min' => 'Debe tener minimo :min caracteres',
+            'display_name.required' => 'Este campo es requerido',
+            'display_name.min' => 'Debe tener minimo :min caracteres'
+        ];
+    }
 }
