@@ -101,9 +101,7 @@ class DocumentController extends Controller
     {
         $document = Document::findOrfail($id);
 
-        $document->arrive_date = date("Y-m-d", strtotime($request->arrive_date));
-        $document->upload_date = date("Y-m-d", strtotime($request->upload_date));
-        if($document->save()){
+        if($document->update($request->all())){
             return redirect('documentos');
         }
     }

@@ -13,13 +13,13 @@
         <div class="panel-body">
 
             {!! Form::model($declaranot,[
-            'route' => ['declaranots.update', $declaranot->id],
+            'route' => ['declaranotspriv.update', $declaranot->id],
             'class' => 'form-horizontal steps-basic',
             'method' => 'patch',
             'id' => 'wizard'
             ]) !!}
             {!! Form::token() !!}
-            @include('declaranots.fields')
+            @include('declaranotspriv.fields')
             {!! Form::close() !!}
         </div>
 

@@ -58,7 +58,7 @@
     <script type="text/javascript" src="{{ URL::asset('js/plugins/forms/styling/uniform.min.js')}}"></script>
     <script type="text/javascript" src="{{ URL::asset('js/plugins/forms/selects/bootstrap_multiselect.js')}}"></script>
     <script type="text/javascript" src="{{ URL::asset('js/plugins/ui/moment/moment.min.js')}}"></script>
-    <script type="text/javascript" src="{{ URL::asset('js/plugins/pickers/daterangepicker.js')}}"></script>
+<!--    <script type="text/javascript" src="{{ URL::asset('js/plugins/pickers/daterangepicker.js')}}"></script> -->
 
 
 

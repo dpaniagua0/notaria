@@ -11,8 +11,9 @@ use App\User;
 use App\Http\Requests;
 use App\Http\Requests\DeclaranotRequest;
 
-class DeclaranotController extends Controller
+class DeclaranotPrivateController extends Controller
 {
+
 
     /**
      * Create a new controller instance.
@@ -25,7 +26,6 @@ class DeclaranotController extends Controller
         $this->middleware('admin');
     }
 
-
     /**
      * Display a listing of the resource.
      *
@@ -34,20 +34,10 @@ class DeclaranotController extends Controller
     public function index()
     {
 
-        $declaranots = Declaranot::where('type','=','1')->paginate(15);
-        return view('declaranots.index', compact('declaranots'));
+        $declaranots = Declaranot::where('type','=','2')->paginate(15);
+        return view('declaranotspriv.index', compact('declaranots'));
     }
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function indexPrivate()
-    {
-        $declaranots = Declaranot::where('type','=','2')->paginate(15);
-        return view('declaranots.index_private', compact('declaranots'));
-    }
 
     /**
      * Show the form for creating a new resource.
@@ -58,7 +48,7 @@ class DeclaranotController extends Controller
     {
         $conceptos = Concepto::lists('display_name', 'id');
         $users = User::lists('name', 'id');
-        return view('declaranots.create', compact('conceptos', 'users'));
+        return view('declaranotspriv.create', compact('conceptos', 'users'));
     }
 
     /**
@@ -91,7 +81,7 @@ class DeclaranotController extends Controller
                 $adq->declaranot_id = $declaranot->id;
                 $declaranot->adquirientes()->save($adq);
             }
-            return redirect('declaranots');
+            return redirect('declaranotspriv');
 
 
         }
@@ -119,7 +109,7 @@ class DeclaranotController extends Controller
         $declaranot = Declaranot::with(['enajenantes', 'adquirientes'])->findOrFail($id);
         $conceptos = Concepto::lists('display_name', 'id');
         $users = User::lists('name', 'id');
-        return view('declaranots.edit', compact('declaranot', 'conceptos', 'users'));
+        return view('declaranotspriv.edit', compact('declaranot', 'conceptos', 'users'));
     }
 
     /**

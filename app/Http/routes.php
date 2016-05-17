@@ -68,3 +68,11 @@ Route::get('declaranots/delete/{id}', [
   'as' => 'declaranots.delete',
   'uses' => 'DeclaranotController@destroy'
 ]);
+
+
+Route::resource('declaranotspriv', 'DeclaranotPrivateController');
+
+Route::get('declaranotspriv/delete/{id}', [
+    'as' => 'declaranotspriv.delete',
+    'uses' => 'DeclaranotPrivateController@destroy'
+]);

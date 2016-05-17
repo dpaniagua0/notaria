@@ -4,7 +4,7 @@
 
 <div class="panel panel-flat">
   <div class="panel-heading">
-    <h2 class="panel-title">Declaranots</h2>
+    <h2 class="panel-title">Declaranots Privados</h2>
   </div>
   <div class="panel-body">
     <div class="row">

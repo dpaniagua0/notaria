@@ -1,8 +1,8 @@
 
 {!! Form::hidden('user_id', Auth::user()->id) !!}
 
-<!-- Public element uses type 1 -->
-{!! Form::hidden('type', '1') !!}
+<!-- Private element uses type 1 -->
+{!! Form::hidden('type', '2') !!}
 
 <h6>Información del Declaranot</h6>
 

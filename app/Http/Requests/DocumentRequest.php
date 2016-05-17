@@ -27,9 +27,9 @@ class DocumentRequest extends Request
         return [
             'file_number' => 'required|min:3',
             'client_name' => 'required|min:3',
-            'upload_date' => 'required|date',
+            'upload_date' => 'required|date_format:Y-m-d',
             'price' => 'required|numeric',
-            'arrive_date' => 'required|date',
+            'arrive_date' => 'required|date_format:Y-m-d',
             'client_name' => 'required|min:3',
             'user_id' => 'required',
             'promoter_id' => 'required',
